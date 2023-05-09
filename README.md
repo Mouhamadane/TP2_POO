@@ -1,4 +1,4 @@
-# TP1_POO
+# TP2
 * Encapsulation
 * Constructeur
 * Heritage
