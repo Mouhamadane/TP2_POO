@@ -1,5 +1,5 @@
 <?php
-class User implements iGestion {
+class User  {
     // Atrributs
     protected $ID;
     protected $nom;
@@ -8,16 +8,24 @@ class User implements iGestion {
     protected $profil;
 
     public function __construct($row=null){
-        if($row!=null){
-            $this->hydrate($row);
-        }
+       if($row!=null){
+        $this->hydrate($row);
+       }
     }
-    
+    // redefinition
     public function hydrate($row){
         $this->ID = $row["id"];
         $this->prenom = $row["prenom"];
         $this->nom = $row["nom"];
         
+    }
+
+    public function Restauration(){
+
+    }
+
+    public function Affichage(){
+        echo "User".$this->ID." ".$this->prenom." ".$this->nom;
     }
 
       // Getter
